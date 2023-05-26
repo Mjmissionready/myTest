@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Addition Example</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter a number">
+    <input type="number" id="num2" placeholder="Enter a number">
+    <button id="addButton">Add</button>
+    <div id="result"></div>
+
+    <script>
+        // Get references to the elements
+        const num1Input = document.getElementById("num1");
+        const num2Input = document.getElementById("num2");
+        const addButton = document.getElementById("addButton");
+        const resultDiv = document.getElementById("result");
+
+        // Add event listener to the button
+        addButton.addEventListener("click", function() {
+            // Get the values of the input fields as numbers
+            const num1 = Number(num1Input.value);
+            const num2 = Number(num2Input.value);
+
+            // Perform the addition
+            const sum = num1 + num2;
+
+            // Display the result
+            // resultDiv.textContent = "Result: " + sum;
+            resultDiv.textContent = `Result: ${num1} + ${num2} = ${sum}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Exercise</title>
+    <!-- <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style> -->
+</head>
+
+<script src="Dom.js"></script>
+
+<body>
+    <h1 id="heading">Hello, DOM!</h1>
+    <button id="toggleBtn">Toggle Color</button>
+</body>
+
+<body>
+    <h1 id="title">Hello, DOM!</h1>
+    <p class="content">DOM is <b>Document Object Model </b>.</p>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <button id="btn">Click me</button>
+    <script>
+        const titleElement = document.getElementById("title");
+        const buttonElement = document.getElementById("btn");
+
+        titleElement.style.color = "red";
+
+        buttonElement.addEventListener("click", function () {
+            // Generate a random number between 1 and 100
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+            // Update the title element with the random number
+            titleElement.textContent = "Button clicked! Random number: " + randomNumber;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM exercise</title>
+
+    <style>
+        .myClass {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 id="myHeading">Hello, World!</h1>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        // Change HTML elements
+        document.getElementById("myHeading").innerHTML = "My Dom Exercise";
+
+        // Change HTML attributes
+        document.getElementById("myButton").setAttribute("disabled", true);
+        // Check if the button is disabled
+        let isDisabled = document.getElementById("myButton").getAttribute("disabled");
+        if (isDisabled === "true") {
+            console.log("Button disabled status:", isDisabled);
+        } else {
+            console.log("Button disabled status:", false);
+        }
+
+        // Change CSS styles
+        document.getElementById("myHeading").classList.add("myClass");
+
+        // Remove HTML elements and attributes
+        document.getElementById("myButton").remove();
+
+        // Add new HTML elements and attributes
+        let newParagraph = document.createElement("p");
+        newParagraph.textContent = "I just added new line using the Dom method";
+        document.body.appendChild(newParagraph);
+
+        // React to HTML events
+        document.addEventListener("click", function () {
+            alert("You clicked the page!");
+        });
+
+        // Create new HTML event
+        let customEvent = new Event("myEvent");
+        // document.dispatchEvent(customEvent);
+
+        document.addEventListener("click", function () {
+            console.log("Custom event triggered!");
+        });
+
+
+        // // Create a new HTML event object
+        // let customEvent = new Event("myEvent");
+
+        // // Log a message before dispatching the event
+        // console.log("Dispatching custom event...");
+
+        // // Dispatch the custom event on the document
+        // document.dispatchEvent(customEvent);
+
+        // // Log a message after dispatching the event
+        // console.log("Custom event dispatched!");
+
+    </script>
+</body>
+
+</html>

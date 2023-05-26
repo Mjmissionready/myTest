@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+</head>
+
+<body>
+    <p id="greeting">Hello Arvo Class</p><button id="change-txt-btn">Change txt</button>
+    <script>
+        const greeting = document.getElementById("greeting");
+        const button = document.getElementById("change-txt-btn");
+        button.addEventListener("click", function () {
+            greeting.textContent = "hello DOM"
+        });
+    </script>
+</body>
+
+<!-- <body>
+    <button id="myBtn">Push</button>
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function () {
+            alert("Button was clicked!");
+        });
+    </script>
+</body>
+
+<body>
+    <p id="myPara">This is query selector</p>
+    <script>
+        let myPara = document.querySelector("#myPara");
+        myPara.textContent = "this is the updated😎"; 
+    </script>
+    <p id="myPara"> this is Arvo class</p>
+    <script>
+        let element1 = document.getElementById("myPara");
+        console.log(element1.textContent);
+        let element2 = document.querySelector("#myPara");
+        console.log(element2.textContent);
+    </script>
+</body> -->
+
+</html>

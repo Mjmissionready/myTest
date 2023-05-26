@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Document</Title>
+    <style>
+        .otherClass {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Title</h1>
+    <p> paragraph </p>
+
+    <div class="className"> class </div>
+    <img id="myImage" src="image.jpg">
+
+
+
+    <script>
+        //ID
+        const titleElement = document.querySelector("#title");
+        titleElement.style.color = "red";
+
+        //tag
+        const paraElement = document.querySelector("p");
+        paraElement.style.color = "blue";
+
+        //Class
+        const classElement = document.querySelector(".className");
+        classElement.style.color = "orange";
+        classElement.style.fontsize = "100px";
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1 -->
+    <p id="myParagraph">Hello, World!</p>
+
+    <!-- 2 -->
+    <img id="myImage" src="image.jpg">
+
+    <button id="myButton">Click Me</button>
+
+    <script>
+        //1
+        const paragraphElement = document.getElementById("myParagraph");
+        paragraphElement.textContent = "Modified text";
+
+        //2
+        const imageElement = document.getElementById("myImage");
+        imageElement.setAttribute("src", "newimage.jpg");
+
+
+        imageElement.style.display = "none"; // To make the image invisible
+        // or
+        imageElement.style.display = "block"; // To make the image visible
+
+        
+        const buttonElement = document.getElementById("myButton");
+        const customEvent = new Event("myEvent");
+        buttonElement.addEventListener("myEvent", function () {
+            console.log("Custom event triggered!");
+        });
+
+        buttonElement.dispatchEvent(customEvent);
+
+
+    </script>
+</body>
+
+</html>
